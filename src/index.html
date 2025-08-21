@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D Puzzle App</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loading-content">
+                <h1>3D Puzzle App</h1>
+                <div class="loading-spinner"></div>
+                <p>Loading...</p>
+            </div>
+        </div>
+
+        <!-- Main Game Container -->
+        <div id="game-container" class="game-container hidden">
+            <!-- UI Overlay -->
+            <div id="ui-overlay" class="ui-overlay">
+                <!-- Header -->
+                <div class="header">
+                    <button id="menu-btn" class="menu-btn">☰</button>
+                    <div class="level-info">
+                        <span id="level-number">Level 1</span>
+                        <span id="move-count">Moves: 0</span>
+                    </div>
+                    <button id="reset-btn" class="reset-btn">↺</button>
+                </div>
+
+                <!-- Timer -->
+                <div class="timer">
+                    <span id="timer-display">00:00</span>
+                </div>
+
+                <!-- Controls Info -->
+                <div class="controls-info">
+                    <p>Swipe to rotate cube • Drag background to rotate view • Pinch to zoom</p>
+                </div>
+            </div>
+
+            <!-- Canvas Container -->
+            <div id="canvas-container" class="canvas-container">
+                <canvas id="game-canvas"></canvas>
+            </div>
+
+            <!-- Menu Modal -->
+            <div id="menu-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2>Menu</h2>
+                    <div class="menu-options">
+                        <button id="levels-btn" class="menu-option">Levels</button>
+                        <button id="settings-btn" class="menu-option">Settings</button>
+                        <button id="stats-btn" class="menu-option">Statistics</button>
+                        <button id="close-menu-btn" class="menu-option">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Levels Modal -->
+            <div id="levels-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2>Levels</h2>
+                    <div id="levels-grid" class="levels-grid">
+                        <!-- Levels will be populated dynamically -->
+                    </div>
+                    <button id="close-levels-btn" class="close-btn">Close</button>
+                </div>
+            </div>
+
+            <!-- Victory Modal -->
+            <div id="victory-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2>🎉 Level Complete!</h2>
+                    <div class="victory-stats">
+                        <p>Moves: <span id="victory-moves">0</span></p>
+                        <p>Time: <span id="victory-time">00:00</span></p>
+                    </div>
+                    <div class="victory-actions">
+                        <button id="next-level-btn" class="primary-btn">Next Level</button>
+                        <button id="replay-btn" class="secondary-btn">Replay</button>
+                        <button id="close-victory-btn" class="secondary-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js?v=6"></script>
+</body>
+</html> 

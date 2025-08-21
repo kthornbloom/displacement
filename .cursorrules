@@ -1,0 +1,41 @@
+# Puzzle App Development Rules
+
+## Project Overview
+Building a 3D puzzle app using Capacitor and Three.js for iOS/Android release. The app features isometric 3D building models cut into Rubik's cube-style puzzles.
+
+## Tech Stack
+- **Capacitor**: Cross-platform mobile development
+- **Three.js**: 3D graphics and rendering
+- **Vanilla JavaScript/CSS/HTML**: Minimal framework approach
+- **GLB/GLTF**: 3D model format
+
+## Core Features
+- Multiple stages with unique 3D building models
+- Rubik's cube-style puzzle mechanics
+- Touch and mouse controls for cube manipulation
+- Scene rotation and zoom controls
+- Progress tracking and metrics
+
+## 3D Model Structure (rubix.glb)
+- Upper level: a1, a2, a3, etc.
+- Middle level: b1, b2, b3, etc.
+- Lower level: c1, c2, c3, etc.
+- Center: "center"
+
+## Controls
+- **Cube manipulation**: Swipe vertically/horizontally (touch/mouse)
+- **Scene rotation**: Drag on background (touch/mouse)
+- **Zoom**: Mouse wheel or pinch gestures (max/min limits)
+
+## Metrics Tracking
+- Number of moves until solved
+- Total time taken to solve
+- Last played timestamp
+- Level unlock status
+
+## Development Guidelines
+- Use minimal frameworks beyond Capacitor and Three.js
+- Focus on vanilla JavaScript/CSS/HTML
+- Ensure cross-platform compatibility
+- Maintain clean, modular code structure
+- Prioritize performance for mobile devices 
